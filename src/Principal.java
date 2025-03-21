@@ -1,15 +1,85 @@
+import java.util.Scanner;
+
 public class Principal {
     public static void main(String[] args) {
-//        Scanner teclado = new Scanner(System.in);
+        int opcao;
+        int moedaSelecionada;
+        double valor = 0;
 
-//        System.out.println("Digite o valor do dolar: ");
-//        float valor = teclado.nextFloat();
-//        Dolar dolar = new Dolar(valor);
-//        Euro euro = new Euro(valor);
-//        Real real = new Real(valor);
+        Scanner teclado = new Scanner(System.in);
+
         Cofrinho cofrinho = new Cofrinho();
-//        System.out.println(dolar.converter(valor));
-        cofrinho.adiconar(new Dolar(3));
-//        cofrinho.adiconar(dolar);
+
+        System.out.println("Bem vindo ao cofrinho! Escolha uma das opções abaixo: ");
+        System.out.println("1 - Adicionar uma moeda");
+        System.out.println("2 - Remover uma moeda");
+        System.out.println("3 - Listar moedas");
+        System.out.println("4 - Calcular total convertido para real");
+        System.out.println("0 - Sair");
+        opcao = teclado.nextInt();
+
+        while (opcao != 0) {
+            switch (opcao) {
+                // adicionar
+                case 1:
+                    System.out.println("Escolha uma moeda: ");
+                    System.out.println("1 - Real: ");
+                    System.out.println("2 - Dólar: ");
+                    System.out.println("3 - Euro: ");
+                    System.out.println("0 - Sair: ");
+                    moedaSelecionada = teclado.nextInt();
+                    while (moedaSelecionada != 0) {
+                        switch (moedaSelecionada) {
+                            case 1:
+                                System.out.println("Digite um valor: ");
+                                valor += teclado.nextDouble();
+                                cofrinho.adiconar(new Real(valor));
+                                break;
+                            case 2:
+                                System.out.println("Digite um valor: ");
+                                valor += teclado.nextDouble();
+                                cofrinho.adiconar(new Dolar(valor));
+                                break;
+                            case 3:
+                                System.out.println("Digite um valor: ");
+                                valor += teclado.nextDouble();
+                                cofrinho.adiconar(new Euro(valor));
+                                break;
+                            default:
+                                System.out.println("Opção inválida!");
+                        }
+                        System.out.println("Escolha uma moeda: ");
+                        System.out.println("1 - Real: ");
+                        System.out.println("2 - Dólar: ");
+                        System.out.println("3 - Euro: ");
+                        System.out.println("0 - Sair: ");
+                        moedaSelecionada = teclado.nextInt();
+                    }
+                    break;
+                // remover
+                case 2:
+                    System.out.println("Escolha uma moeda: ");
+                    System.out.println("1 - Real: ");
+                    System.out.println("2 - Dólar: ");
+                    System.out.println("3 - Euro: ");
+                    moedaSelecionada = teclado.nextInt();
+                    break;
+                case 3:
+                    cofrinho.listagemMoedas();
+                    break;
+                case 4:
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+
+            }
+            System.out.println("Bem vindo ao cofrinho! Escolha uma das opções abaixo: ");
+            System.out.println("1 - Adicionar uma moeda");
+            System.out.println("2 - Remover uma moeda");
+            System.out.println("3 - Listar moedas");
+            System.out.println("4 - Calcular total convertido para real");
+            System.out.println("0 - Sair");
+            opcao = teclado.nextInt();
+        }
     }
 }
