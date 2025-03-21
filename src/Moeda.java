@@ -1,11 +1,20 @@
-abstract class Moeda {
+public abstract class Moeda {
     double valor;
+    double cotacao;
 
-    public void info () {
-//        System.out.println("O cotação da moeda está em R$ " + valor);
-    };
+    public Moeda(double valor) {
+        this.valor = valor;
+    }
 
-    public double converter(double cotacao) {
+    abstract public void info();
+
+
+    public double converter(double cotacao, double valor) {
+        this.valor = valor;
+        this.cotacao = cotacao;
         return valor * cotacao;
-    };
+    }
+
+
+//    public abstract double converter(float cotacao, float valor);
 }
