@@ -1,13 +1,14 @@
 public abstract class Moeda {
+    String nome;
     double valor;
     double cotacao;
 
-    public Moeda(double valor) {
+    public Moeda(String nome, double valor) {
+        this.nome = nome;
         this.valor = valor;
     }
 
     abstract public void info();
-
 
     public double converter(double cotacao, double valor) {
         this.valor = valor;
@@ -15,6 +16,4 @@ public abstract class Moeda {
         return valor * cotacao;
     }
 
-
-//    public abstract double converter(float cotacao, float valor);
 }
