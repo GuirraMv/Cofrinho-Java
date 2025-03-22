@@ -1,6 +1,6 @@
 public class Euro extends Moeda {
     static final String nome = "Euro";
-    double cotacao = 6.16F;
+    double cotacao = 6.16;
     double valor;
 
     public Euro(double valor) {

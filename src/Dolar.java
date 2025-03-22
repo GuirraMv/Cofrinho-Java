@@ -1,6 +1,6 @@
 public class Dolar extends Moeda {
     static final String nome = "Dolar";
-    double cotacao = 5.68F;
+    double cotacao = 5.68;
     double valor;
 
     public Dolar(double valor) {

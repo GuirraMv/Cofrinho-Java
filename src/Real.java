@@ -1,7 +1,7 @@
 public class Real extends Moeda {
     static final String nome = "Real";
     double valor;
-    double cotacao = 0;
+    double cotacao = 1;
 
     public Real(double valor) {
         super(nome, valor);
