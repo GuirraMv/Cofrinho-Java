@@ -8,7 +8,7 @@ public abstract class Moeda {
         this.valor = valor;
     }
 
-    abstract public void info();
+    abstract public void info(double valor);
 
     public double converter(double cotacao, double valor) {
         this.valor = valor;

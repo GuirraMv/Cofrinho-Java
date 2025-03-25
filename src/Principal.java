@@ -4,7 +4,7 @@ public class Principal {
     public static void main(String[] args) {
         int opcao;
         int moedaSelecionada;
-        double valor = 0;
+        double valor;
 
         Scanner teclado = new Scanner(System.in);
 

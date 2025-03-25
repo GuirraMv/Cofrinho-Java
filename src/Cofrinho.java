@@ -27,14 +27,14 @@ public class Cofrinho {
         // se listaMoedas não estiver vazia irá exibir todos os elementos pelo for
         if (!listaMoedas.isEmpty()) {
             for (Moeda moeda : listaMoedas) {
-                System.out.println(moeda.nome + " " + moeda.valor);
+                moeda.info(moeda.valor);
             }
         } else {
             System.out.println("Não há moedas no cofrinho! Adicione uma moeda para o cofrinho.");
         }
     }
 
-    public double totalConvertido() {
+    public void totalConvertido() {
         double dolarConvertido = 0;
         double euroConvertido = 0;
         double realConvertido = 0;
@@ -56,6 +56,5 @@ public class Cofrinho {
 
         totalConvertido = (dolarConvertido + euroConvertido + realConvertido);
         System.out.println("O total convertido em Reais é de R$: " + totalConvertido);
-        return totalConvertido;
     }
 }
