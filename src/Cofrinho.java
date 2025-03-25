@@ -6,6 +6,7 @@ public class Cofrinho {
 
     public void adicionar(Moeda moeda) {
         listaMoedas.add(moeda);
+        System.out.println("Moeda de " + moeda.nome + " no valor de " + moeda.valor + " adicionada com sucesso!");
     }
 
     public void remover(Moeda moeda) {
@@ -19,7 +20,7 @@ public class Cofrinho {
                 System.out.println("Não existe " + moeda.nome + " armazenado no valor de " + moeda.valor);
             }
         } else {
-            System.out.println("Moeda não encontrada. Selecione uma moeda existente para remover.");
+            System.out.println("Moeda não encontrada. Digite uma moeda existente para remover.");
         }
     }
 
@@ -44,13 +45,13 @@ public class Cofrinho {
         for (Moeda moeda : listaMoedas) {
             if (Objects.equals(moeda.nome, "Dolar")) {
                 Dolar dolar = new Dolar(moeda.valor);
-                dolarConvertido = dolar.converter(moeda.valor);
+                dolarConvertido += dolar.converter(moeda.valor);
             } else if (Objects.equals(moeda.nome, "Euro")) {
                 Euro euro = new Euro(moeda.valor);
-                euroConvertido = euro.converter(moeda.valor);
+                euroConvertido += euro.converter(moeda.valor);
             } else {
                 Real real = new Real(moeda.valor);
-                realConvertido = real.converter(moeda.valor);
+                realConvertido += real.converter(moeda.valor);
             }
         }
 

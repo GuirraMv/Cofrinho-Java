@@ -15,5 +15,4 @@ public abstract class Moeda {
         this.cotacao = cotacao;
         return valor * cotacao;
     }
-
 }

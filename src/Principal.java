@@ -94,6 +94,7 @@ public class Principal {
                         moedaSelecionada = teclado.nextInt();
                     }
                     break;
+
                 //listar moedas
                 case 3:
                     cofrinho.listagemMoedas();
