@@ -14,7 +14,7 @@ public class Cofrinho {
         if (listaMoedas.contains(moeda)) {
             // verifica se o valor da moeda inserida é igual à moeda armazenada
             if (moeda.valor == listaMoedas.get(listaMoedas.size() - 1).valor) {
-                listaMoedas.remove(listaMoedas.size() - 1);
+                listaMoedas.remove(moeda);
                 System.out.println(moeda.nome + " " + moeda.valor + " removido com sucesso.");
             } else {
                 System.out.println("Não existe " + moeda.nome + " armazenado no valor de " + moeda.valor);

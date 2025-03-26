@@ -14,13 +14,11 @@ public class Euro extends Moeda {
     }
 
     @Override
-    public boolean equals(Object objeto) {
-        // Verifica se é o mesmo objeto na memória
-        if (this == objeto) return true;
-        // Garante que o objeto não é nulo e é do mesmo tipo
-        if (objeto == null || getClass() != objeto.getClass()) return false;
-        Euro other = (Euro) objeto;
-        return Double.compare(valor, other.valor) == 0;
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Euro euro = (Euro) o;
+        return Double.compare(valor, euro.valor) == 0;
     }
 
     public double converter(double valor) {
